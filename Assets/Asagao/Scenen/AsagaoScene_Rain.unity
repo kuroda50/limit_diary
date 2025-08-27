@@ -336,7 +336,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.559
+  m_FillAmount: 0.634
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1227,7 +1227,7 @@ MonoBehaviour:
   hit_buket: {fileID: 1682680309}
   setWater: 10
   ClierLineMin: 0.559
-  ClierLineMax: 0.64
+  ClierLineMax: 0.634
 --- !u!212 &1928500337
 SpriteRenderer:
   m_ObjectHideFlags: 0

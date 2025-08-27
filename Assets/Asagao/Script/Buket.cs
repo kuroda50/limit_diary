@@ -38,9 +38,8 @@ public class Buket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 入力されたときの実行
-        
-        if(Input.GetKey(KeyCode.Mouse0))
+        // 入力されたときの実行　チャレンジ回数は1回のみ
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             if (!isonleyInput)
             {

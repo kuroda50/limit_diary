@@ -9,10 +9,9 @@ public class WaterGauge : MonoBehaviour
     private float Max;
     private float water = 0;
 
-    // 水分量によるパーセント幅
+    // 水分量によるパーセント幅 いらないかも
     private float percent;
     
-
     [SerializeField] GameObject Asagao;
     [SerializeField] Flower flower;
 
@@ -31,6 +30,7 @@ public class WaterGauge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 水分量を取得してゲージに反映
         water = flower.GetWater();
         percent = (water / Max);
         if(percent > 1)
