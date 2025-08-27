@@ -4,12 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Timeline;
-using UnityEngine.UI;
 
 public sealed class CalenderSystem : MonoBehaviour
 {
-    [SerializeField] Image marker;
+    [SerializeField] MarkerUI marker;
     [SerializeField] List<RectTransform> daySlots;
     [SerializeField] List<int> weekEndDaies;
     [SerializeField] List<EventDay> eventDaies;
@@ -28,10 +26,10 @@ public sealed class CalenderSystem : MonoBehaviour
 
         for (; ; currentDay++)
         {
-            var matched = eventDaies.FirstOrDefault(e => e.Day == currentDay);
-            if (matched != null)
+            var matchedEventDay = eventDaies.FirstOrDefault(e => e.Day == currentDay);
+            if (matchedEventDay != null)
             {
-                matched.OnStart();
+                yield return StartCoroutine(OnTranslateEventDay(matchedEventDay));
             }
 
             if (weekEndDaies.Contains(currentDay))
@@ -40,36 +38,26 @@ public sealed class CalenderSystem : MonoBehaviour
             }
             else
             {
-                yield return StartCoroutine(OnMoveMarkerNextDayAsync(currentDay + 1));
+                yield return StartCoroutine(marker.OnMoveAsync(daySlots[currentDay].position));
             }
-        }
-    }
-
-    private IEnumerator OnMoveMarkerNextDayAsync(int nextDay)
-    {
-        while (true)
-        {
-            var moveDirection = daySlots[nextDay - 1].position - marker.transform.position;
-
-            if (moveDirection.magnitude < 2)
-                break;
-
-            marker.transform.position += moveDirection.normalized;
-            yield return null;
         }
     }
 
     private IEnumerator OnDisappearNextWeekAsync(int nextDay)
     {
-        for (float alpha = 1; alpha > 0; alpha -= 0.02f)
-        {
-            marker.color = new Color(marker.color.r, marker.color.g, marker.color.b, alpha);
-            yield return null;
-        }
-
+        yield return marker.OnDisappearAnimationAsync();
         marker.transform.position = daySlots[nextDay].transform.position;
-        marker.color = new Color(255, 255, 255, 255);
+        yield return marker.OnAppearAnimationAsync();
     }
+
+
+    private IEnumerator OnTranslateEventDay(EventDay eventDay)
+    {
+        yield return StartCoroutine(marker.OnScaleAttensionAsync());
+
+        eventDay.OnStart();
+    }
+
 
 
     [Serializable]

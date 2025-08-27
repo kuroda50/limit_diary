@@ -157,41 +157,6 @@ RectTransform:
   m_AnchoredPosition: {x: 57.125, y: -97}
   m_SizeDelta: {x: 114.25, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &225349920
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 225349921}
-  m_Layer: 5
-  m_Name: CalenderSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &225349921
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225349920}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 830171415}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &303864872
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +601,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 225349921}
   - {fileID: 303864873}
   - {fileID: 1160309241}
   m_Father: {fileID: 1464418164}
@@ -696,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d72cdadc5b52c46940a19109fa2054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  marker: {fileID: 1160309242}
+  marker: {fileID: 1160309244}
   daySlots:
   - {fileID: 486415247}
   - {fileID: 1532587623}
@@ -732,7 +696,19 @@ MonoBehaviour:
   weekEndDaies: 030000000a00000011000000180000001f000000
   eventDaies:
   - day_: 1
-    eventSceneName_: SampleScene
+    eventSceneName_: 
+  - day_: 7
+    eventSceneName_: 
+  - day_: 13
+    eventSceneName_: 
+  - day_: 17
+    eventSceneName_: 
+  - day_: 23
+    eventSceneName_: 
+  - day_: 27
+    eventSceneName_: 
+  - day_: 31
+    eventSceneName_: 
   currentDay: 1
 --- !u!1 &928063081
 GameObject:
@@ -1093,8 +1069,9 @@ GameObject:
   - component: {fileID: 1160309241}
   - component: {fileID: 1160309243}
   - component: {fileID: 1160309242}
+  - component: {fileID: 1160309244}
   m_Layer: 5
-  m_Name: Mark
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1117,7 +1094,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 120.3, y: 98.2}
-  m_SizeDelta: {x: 65, y: 65}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160309242
 MonoBehaviour:
@@ -1157,6 +1134,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160309240}
   m_CullTransparentMesh: 1
+--- !u!114 &1160309244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160309240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794b3b03f63f71c4fb4c8e7b11582d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed_: 1
+  cancelMoveDistance_: 1
+  moveCooldown_: 0.1
+  disappearSpeed_: 0.01
+  appearSpeed_: 0.01
 --- !u!1 &1433614470
 GameObject:
   m_ObjectHideFlags: 0
