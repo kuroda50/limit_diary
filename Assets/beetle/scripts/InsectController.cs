@@ -22,6 +22,7 @@ public class InsectController : MonoBehaviour
         timer = GameObject.Find("TimerBase").GetComponent<Timer>();
         howToMove = Random.Range(0, 3);
         howToEscape = Random.Range(0, 3);
+        speed = (float)Random.Range(speed-1.5f, speed + 1.5f);
         radius = Screen.width;
         angle = Random.Range(0, 360);
         rad = angle * Mathf.Deg2Rad;
