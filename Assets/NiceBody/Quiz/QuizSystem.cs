@@ -13,7 +13,7 @@ public sealed class QuizSystem : MonoBehaviour
 
     [Header("View")]
     [SerializeField] AnswerCnadiateUiGroup answerCandiateUiGroup_;
-    [SerializeField] Text quizTextBox;
+    [SerializeField] Text topicTextBox;
 
 
     private void Start()
@@ -27,11 +27,12 @@ public sealed class QuizSystem : MonoBehaviour
         appearedQuizzes.Add(quiz);
 
 
-
+        topicTextBox.text = quiz.TopicText;
         var zipped = quiz.AnswerCandiates.Zip(answerCandiateUiGroup_.Get, (answer, ui) => (answer, ui));
 
         foreach (var (answer, ui) in zipped)
         {
+            ui.TextBox.text = answer.Text;
             ui.Button.onClick.AddListener(() =>
             {
                 if (quiz.CorrectAnswerIndex == quiz.AnswerCandiates.IndexOf(answer))
