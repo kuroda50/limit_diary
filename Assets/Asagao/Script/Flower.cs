@@ -19,6 +19,7 @@ public class Flower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        asagao.SetActive(false);
         water = setWater;
         isClier = false;
     }
@@ -41,6 +42,7 @@ public class Flower : MonoBehaviour
 
         if (isClier)
         {
+            asagao.SetActive(true);
             Debug.Log("Clear!");
         }
 
