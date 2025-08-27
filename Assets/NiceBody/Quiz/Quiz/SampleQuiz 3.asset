@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SampleQuiz 3
   m_EditorClassIdentifier: 
   topicText: AIUEO
+  dateSprite: {fileID: 21300000, guid: 2aa319404a533124a837df2a8f1893de, type: 3}
   answerCandiates_:
   - text: A
     uiSprite_: {fileID: 0}
