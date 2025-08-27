@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class InsectController : MonoBehaviour
 {
-    public float speed;
+    [SerializeField]float speed;//prefabÇ©ÇÁÇ¢Ç∂ÇÍÇ‹Ç∑
     int howToMove;
+    int howToEscape;
     private Vector2 screenCenter;
     float angle;
     float rad;
@@ -13,14 +14,15 @@ public class InsectController : MonoBehaviour
     float pos;
     bool isEated=false;
     InstantiateInsect instantiateInsect;
-    RectTransform rectTransform;
+    Timer timer;
     // Start is called before the first frame update
     void Start()
     {
         instantiateInsect=GameObject.Find("comeInsect").GetComponent<InstantiateInsect>();
-        rectTransform=GetComponent<RectTransform>();
+        timer = GameObject.Find("TimerBase").GetComponent<Timer>();
         howToMove = Random.Range(0, 3);
-        radius= Screen.width;
+        howToEscape = Random.Range(0, 3);
+        radius = Screen.width;
         angle = Random.Range(0, 360);
         rad = angle * Mathf.Deg2Rad;
         rx = Mathf.Cos(rad) * radius;
@@ -30,7 +32,11 @@ public class InsectController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        screenCenter=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/2,Screen.height/2,0));
+        if (!timer.IsGameOver())//éûä‘êÿÇÍÇ≈è¡Ç∑
+        {
+            Destroy(this.gameObject);
+        }
+        screenCenter =Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/2,Screen.height/2,0));
         Debug.Log(screenCenter);
         if (!isEated)
         {
@@ -40,9 +46,10 @@ public class InsectController : MonoBehaviour
         }
         else
         {
-            transform.position=Vector3.MoveTowards(transform.position,new Vector3(rx,ry,0),speed*Time.deltaTime);
-            //Debug.Log(transform.position);
-            if (Vector3.Distance(this.transform.position,screenCenter)> 10f)
+            if(howToEscape==0)transform.position=Vector3.Lerp(transform.position,new Vector3(rx,ry,0),speed*Time.deltaTime);
+            if(howToEscape==1)transform.position=Vector3.Slerp(transform.position,new Vector3(rx,ry,0),speed*Time.deltaTime);
+            if(howToEscape==2)transform.position=Vector3.MoveTowards(transform.position,new Vector3(rx,ry,0),speed*Time.deltaTime);
+            if (Vector3.Distance(this.transform.position,screenCenter)> 10f)//âÊñ íÜâõÇ©ÇÁworldç¿ïWÇ≈10à»è„ó£ÇÍÇΩÇÁè¡Ç∑
             {
                 Destroy(this.gameObject);
             }
