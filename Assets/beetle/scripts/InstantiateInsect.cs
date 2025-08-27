@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class InstantiateInsect : MonoBehaviour
 {
+   Å@[SerializeField] GameObject resultText;
+
     public Canvas canvas;
     public GameObject[] insects;
     public int catchCount;
@@ -14,9 +16,13 @@ public class InstantiateInsect : MonoBehaviour
     float rx;
     float ry;
     float radius;
+    Text text;
+    Timer timer;
     // Start is called before the first frame update
     void Start()
     {
+        text=resultText.GetComponent<Text>();
+        timer = GameObject.Find("TimerBase").GetComponent<Timer>();
         radius = Screen.width;
         StartCoroutine(Insect());
     }
@@ -28,12 +34,13 @@ public class InstantiateInsect : MonoBehaviour
         rad = angle * Mathf.Deg2Rad;
         rx= Mathf.Cos(rad) * radius;
         ry= Mathf.Sin(rad) * radius;
+        text.text = $"íéÇ{ catchCount.ToString()}Ç–Ç´ïﬂÇ‹Ç¶ÇΩÅI";
     }
    
-    IEnumerator Insect()
+    IEnumerator Insect()//â~èÛÇ…ê∂ê¨
     {
-        yield return new WaitForSeconds(3);
-        while (true)
+        yield return new WaitForSeconds(1);
+        while (timer.IsGameOver())
         {
             GameObject Object = Instantiate(insects[Random.Range(0, insects.Length)], new Vector3(rx, ry, 0), Quaternion.identity);
             Object.transform.SetParent(canvas.transform, false);
