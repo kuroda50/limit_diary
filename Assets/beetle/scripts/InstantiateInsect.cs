@@ -7,6 +7,7 @@ public class InstantiateInsect : MonoBehaviour
 {
     public Canvas canvas;
     public GameObject[] insects;
+    public int catchCount;
     float constant = 3;
     float angle;
     float rad;
@@ -28,6 +29,7 @@ public class InstantiateInsect : MonoBehaviour
         rx= Mathf.Cos(rad) * radius;
         ry= Mathf.Sin(rad) * radius;
     }
+   
     IEnumerator Insect()
     {
         yield return new WaitForSeconds(3);
