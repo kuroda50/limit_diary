@@ -696,19 +696,19 @@ MonoBehaviour:
   weekEndDaies: 030000000a00000011000000180000001f000000
   eventDaies:
   - day_: 1
-    eventSceneName_: 
+    eventSceneName_: AsagaoScene_Cloud
   - day_: 7
-    eventSceneName_: 
+    eventSceneName_: FireGame
   - day_: 13
-    eventSceneName_: 
+    eventSceneName_: AsagaoScene_Rain
   - day_: 17
     eventSceneName_: 
   - day_: 23
-    eventSceneName_: 
+    eventSceneName_: AsagaoScene_Sunny
   - day_: 27
-    eventSceneName_: 
+    eventSceneName_: beetle
   - day_: 31
-    eventSceneName_: 
+    eventSceneName_: Quiz
   currentDay: 1
 --- !u!1 &928063081
 GameObject:
