@@ -12,7 +12,7 @@ public sealed class NetGenerator : MonoBehaviour
     {
         if (!Input.GetMouseButtonDown(0))
             return;
-
+        SEManager.instance.PlaySE(2);
         Vector3 screenPos = Input.mousePosition;
 
         // Z（カメラからの距離）を指定する必要がある

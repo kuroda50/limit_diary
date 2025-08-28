@@ -12,5 +12,6 @@ public sealed class OnChangeSceneButton : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(onLoadSceneName);
+        SEManager.instance.PlaySE(4);
     }
 }

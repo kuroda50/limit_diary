@@ -7,5 +7,6 @@ public class CreditBuckButton : MonoBehaviour
     {
         Debug.Log(sceneName + "シーンに移動する処理を実装してください");
         SceneManager.LoadScene(sceneName);
+        SEManager.instance.PlaySE(2);
     }
 }

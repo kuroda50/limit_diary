@@ -17,11 +17,7 @@ public class NextScene : MonoBehaviour
     }
     public void LoadNextScene()
     {
+        SEManager.instance.PlaySE(2);
         SceneManager.LoadScene("scenename");
-    }
-
-    public void playSE()
-    {
-        // SEManager.instance.PlaySE();
     }
 }

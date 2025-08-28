@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 334287218}
   - component: {fileID: 334287221}
   - component: {fileID: 334287222}
+  - component: {fileID: 334287223}
   m_Layer: 5
   m_Name: Credit
   m_TagString: Untagged
@@ -257,6 +258,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idleSprite_: {fileID: 21300000, guid: e409b2af707eb994aae8ed9648903cd0, type: 3}
   pointerDownSprite_: {fileID: 21300000, guid: 7cf8c921717c6294e9214d6ed8dd433d, type: 3}
+--- !u!114 &334287223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334287215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fbff2bc8dc3b84c97088e20362951e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLoadSceneName: Credit
 --- !u!1 &376174858
 GameObject:
   m_ObjectHideFlags: 0
