@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - WatermelonMovelimit
+  - Suika
+  - Bat
+  - Character1
+  - Character2
   layers:
   - Default
   - TransparentFX
@@ -40,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: back Ground
+    uniqueID: 2360358755
+    locked: 0
+  - name: water melon
+    uniqueID: 2369100187
+    locked: 0
+  - name: character
+    uniqueID: 227567859
     locked: 0
