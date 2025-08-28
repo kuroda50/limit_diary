@@ -33,6 +33,8 @@ public class Timer : MonoBehaviour
         // Debug.Log("timer: " + timer);
         if (seconds >= timerLimit)
         {
+            if(!isGameover)
+                SEManager.instance.PlaySE(4);
             isGameover = true;
         }
 

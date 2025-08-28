@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/NiceBody/Quiz/Quiz.unity
     guid: a4625e34e2ef7d4458b7b1545c01a771
   - enabled: 1
+    path: Assets/kuroriku/Credit.unity
+    guid: 8b9aa9597561b514b9b5ae8f198d9cf4
+  - enabled: 1
     path: Assets/beetle/scene/beetle.unity
     guid: 50fb5b4623fdcaa488b9bb60887a5654
   - enabled: 0

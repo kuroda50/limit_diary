@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         handL.SetBool("OnClick", true);
         stick.SetBool("OnClick", true);
         smoke.SetBool("OnClick", true);
-        SEManager.instance.PlaySE(0);
+        SEManager.instance.PlaySE(4);
     }
 
     public void ChangeToScene(string sceneName)
