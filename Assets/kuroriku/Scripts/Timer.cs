@@ -29,8 +29,8 @@ public class Timer : MonoBehaviour
     {
         seconds += Time.deltaTime;
         float timer = seconds / timerLimit;
-        Debug.Log("seconds: " + seconds);
-        Debug.Log("timer: " + timer);
+        // Debug.Log("seconds: " + seconds);
+        // Debug.Log("timer: " + timer);
         if (seconds >= timerLimit)
         {
             isGameover = true;
