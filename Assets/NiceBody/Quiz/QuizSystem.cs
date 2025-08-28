@@ -12,6 +12,10 @@ public sealed class QuizSystem : MonoBehaviour
     [SerializeField] int maxAppearQuizCount_ = 10;
     [SerializeField] int appearQuizCount_ = 0;
 
+    [Header("AnswerCount")]
+    [SerializeField] int correctAnswerCount_ = 0;
+    [SerializeField] int wrongAnswerCount_ = 0;
+
     [Header("View")]
     [SerializeField] Canvas quizCanvas;
     [SerializeField] Image dateImageBox_;
@@ -24,8 +28,9 @@ public sealed class QuizSystem : MonoBehaviour
     [SerializeField] Sprite wrongAnswerCharactorSprite_;
     [SerializeField] Sprite stayAnswerCharactorSprite_;
 
-    [Header("ResultView")]
-    [SerializeField] Canvas resultCanvas;
+    [Header("Result")]
+    [SerializeField] QuizResultSystem resultSystem;
+    [SerializeField] int isSuccessNeedCount = 3;
 
 
     private void Start()
@@ -48,7 +53,11 @@ public sealed class QuizSystem : MonoBehaviour
         foreach (var (answer, ui) in zipped)
         {
             ui.TextBox.text = answer.Text;
-            ui.Button.onClick.AddListener(() => StartCoroutine(OnAnswerSelect(answer)));
+            ui.Button.onClick.AddListener(() =>
+            {
+                StartCoroutine(OnAnswerSelect(answer));
+                ui.Button.onClick.RemoveAllListeners();
+            });
         }
 
         IEnumerator OnAnswerSelect(QuizStatus.AnswerCandidate answer)
@@ -58,23 +67,25 @@ public sealed class QuizSystem : MonoBehaviour
             if (quiz.CorrectAnswerIndex == quiz.AnswerCandiates.IndexOf(answer))
             {
                 answerCharactorImage_.sprite = correctAnswerCharactorSprite_;
-                Debug.Log("Correct!");
+                correctAnswerCount_++;
+                Debug.Log("<color=green>Correct!</color>");
             }
             else
             {
                 answerCharactorImage_.sprite = wrongAnswerCharactorSprite_;
-                Debug.Log("Wrong...");
+                wrongAnswerCount_++;
+                Debug.Log("<color=red>Wrong...</color>");
             }
 
             yield return new WaitForSeconds(1.0f);
 
             if (maxAppearQuizCount_ > appearQuizCount_)
-            {   
+            {
                 OnAskQuiz();
             }
             else
             {
-                OnMigrateResult();
+                StartCoroutine(OnMigrateResult());
             }
         }
     }
@@ -84,8 +95,6 @@ public sealed class QuizSystem : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
 
         quizCanvas.enabled = false;
-        resultCanvas.enabled = true;
-
-        
+        resultSystem.OnDisplayResult(correctAnswerCount_ >= isSuccessNeedCount);
     }
 }

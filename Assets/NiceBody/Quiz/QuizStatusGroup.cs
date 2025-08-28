@@ -7,11 +7,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "QuizStatusGroup", menuName = "Scriptable Objects/QuizStatusGroup")]
 public class QuizStatusGroup : ScriptableObject
 {
-    [SerializeField] List<QuizStatus> quizzes;
+    [SerializeField] List<QuizStatus> quizzes_;
 
     public QuizStatus GetRandomQuizStatus(IReadOnlyCollection<QuizStatus> excludeQuiz)
     {
-        var filtered = quizzes
+        var filtered = quizzes_
             .Where(q => !excludeQuiz.Contains(q))
             .ToList();
 

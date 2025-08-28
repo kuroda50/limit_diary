@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a26e34b5d9008498350a8b5a9d4166, type: 3}
   m_Name: QuizStatusGroup
   m_EditorClassIdentifier: 
-  quizzes:
+  quizzes_:
   - {fileID: 11400000, guid: c5769ef0dcf62be448f9b525f7804869, type: 2}
   - {fileID: 11400000, guid: dc9a5bd41eed84945a33af99c0297582, type: 2}
   - {fileID: 11400000, guid: 9a76eb3b7ff9f4e41953ce29e57c811e, type: 2}
