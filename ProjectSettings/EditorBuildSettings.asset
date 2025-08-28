@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/NiceBody/Quiz/TitleScene.unity
+    guid: 0425de43837a7bb43b56716da4d4c8a7
+  - enabled: 1
     path: Assets/kuroriku/Settings.unity
     guid: 404669447c00aba4497837610ec98b84
+  - enabled: 1
+    path: Assets/NiceBody/Calender.unity
+    guid: aa7b030b9f2b73f4cafe1ab273a809f0
+  - enabled: 1
+    path: Assets/NiceBody/Quiz/Quiz.unity
+    guid: a4625e34e2ef7d4458b7b1545c01a771
+  - enabled: 1
+    path: Assets/beetle/scene/beetle.unity
+    guid: 50fb5b4623fdcaa488b9bb60887a5654
   - enabled: 0
     path: Assets/kuroriku/Game.unity
     guid: a044199a72f56f44fab454913e3c4fcc
@@ -18,6 +30,14 @@ EditorBuildSettings:
     path: Assets/kuroriku/FireGame.unity
     guid: 9542fd61191113546a5bae8ca8e53645
   - enabled: 1
+    path: Assets/Asagao/Scenen/AsagaoScene_Cloud.unity
+    guid: 606ec61afa8b1cd4eb0516913ff9e339
+  - enabled: 1
+    path: Assets/Asagao/Scenen/AsagaoScene_Rain.unity
+    guid: 07ecaa89c388d204d89bfb6334fa0485
+  - enabled: 1
+    path: Assets/Asagao/Scenen/AsagaoScene_Sunny.unity
+    guid: 5da5b0c2bb8f6704eb556361101c2b4f
     path: Assets/Scenes/Result1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1

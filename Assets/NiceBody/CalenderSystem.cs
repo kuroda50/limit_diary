@@ -71,6 +71,7 @@ public sealed class CalenderSystem : MonoBehaviour
         yield return StartCoroutine(marker.OnScaleAttensionAsync());
 
         eventDay.OnStart();
+        yield return new WaitForSeconds(1);
     }
 
 
