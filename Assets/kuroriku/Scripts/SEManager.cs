@@ -9,6 +9,7 @@ public class SEManager : MonoBehaviour
     public static SEManager instance;
 
     [SerializeField] AudioSource seAudioSource;
+    [SerializeField] public AudioClip[] SEClips; // 再生したいSEのリスト
 
     void Awake()
     {
@@ -27,9 +28,20 @@ public class SEManager : MonoBehaviour
     {
         seAudioSource.volume = volume;
     }
-    // クリップを受け取ってSEを鳴らす
-    public void PlaySE(AudioClip clip)
+    public void PlaySE(int index)
     {
-        seAudioSource.PlayOneShot(clip);
+        // 指定された番号がリストの範囲内かチェック
+        if (index < 0 || index >= SEClips.Length)
+        {
+            Debug.LogWarning("SEの指定番号が範囲外です。");
+            return;
+        }
+
+        // 再生するSEクリップを取得
+        AudioClip newClip = SEClips[index];
+
+        // SEを差し替えて再生
+        seAudioSource.clip = newClip;
+        seAudioSource.Play();
     }
 }

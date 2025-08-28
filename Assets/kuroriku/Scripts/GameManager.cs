@@ -3,16 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Microsoft.Unity.VisualStudio.Editor;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Animator anim;
-    [SerializeField] private GameObject resultPanel;
+    [SerializeField] private Animator handR;
+    [SerializeField] private Animator handL;
+    [SerializeField] private Animator stick;
+    [SerializeField] private Animator smoke;
+    [SerializeField] private GameObject clearResultPanel;
+    [SerializeField] private GameObject failureResultPanel;
     [SerializeField] private GameObject clickButton;
-    [SerializeField] private TextMeshProUGUI resultCounterText;
+    [SerializeField] private TextMeshProUGUI clearResultCounterText;
+    [SerializeField] private TextMeshProUGUI faultResultCounterText;
     [SerializeField] private TextMeshProUGUI counterText;
     [SerializeField] private int counter = 0;
     [SerializeField] private Timer timer;
+
+    private int clearCount = 40;
 
     void Start()
     {
@@ -21,11 +29,18 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (timer.IsGameOver() && !resultPanel.activeSelf)//制限時間が来たら条件式をtrueにする処理に書き換える
+        if (timer.IsGameOver() && !clearResultPanel.activeSelf)//制限時間が来たら条件式をtrueにする処理に書き換える
         {
             Debug.Log("ゲームオーバーです");
-            resultPanel.SetActive(true); // 結果パネルを表示
             clickButton.SetActive(false); // クリックパネルを非表示
+            if (counter >= clearCount)
+            {
+                clearResultPanel.SetActive(true); // 結果パネルを表示
+            }
+            else
+            {
+                failureResultPanel.SetActive(true); // 結果パネルを表示
+            }
             return;
         }
     }
@@ -34,9 +49,14 @@ public class GameManager : MonoBehaviour
     {
         counter++;
         counterText.text = counter.ToString();
-        resultCounterText.text = counter.ToString();
+        clearResultCounterText.text = counter.ToString();
+        faultResultCounterText.text = counter.ToString();
         Debug.Log("counter: " + counter);
-        anim.SetBool("OnClick", true);
+        handR.SetBool("OnClick", true);
+        handL.SetBool("OnClick", true);
+        stick.SetBool("OnClick", true);
+        smoke.SetBool("OnClick", true);
+        SEManager.instance.PlaySE(0);
     }
 
     public void ChangeToScene(string sceneName)

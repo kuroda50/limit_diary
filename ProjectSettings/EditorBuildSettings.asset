@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/NiceBody/Title/Title.unity
-    guid: 76d8cdb75fca15047a31a8a9acad52a1
+    path: Assets/kuroriku/Settings.unity
+    guid: 404669447c00aba4497837610ec98b84
+  - enabled: 0
+    path: Assets/kuroriku/Game.unity
+    guid: a044199a72f56f44fab454913e3c4fcc
   - enabled: 1
-    path: Assets/NiceBody/Calender.unity
-    guid: aa7b030b9f2b73f4cafe1ab273a809f0
+    path: Assets/kuroriku/FireGame.unity
+    guid: 9542fd61191113546a5bae8ca8e53645
   m_configObjects: {}
