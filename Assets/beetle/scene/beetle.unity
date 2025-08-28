@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &131471949
 RectTransform:
   m_ObjectHideFlags: 0
@@ -314,7 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 433584521}
-  - component: {fileID: 433584520}
+  - component: {fileID: 433584522}
   m_Layer: 0
   m_Name: sceneManager
   m_TagString: Untagged
@@ -322,18 +322,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &433584520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433584519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5715022d1776434ea5b9bff59148a2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &433584521
 Transform:
   m_ObjectHideFlags: 0
@@ -349,6 +337,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433584522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433584519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf1ea34205456f4cad72898e72ddf8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &583755760
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &583755761
 RectTransform:
   m_ObjectHideFlags: 0
@@ -585,8 +585,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195500838}
-  - component: {fileID: 1195500839}
   - component: {fileID: 1195500840}
+  - component: {fileID: 1195500839}
   m_Layer: 0
   m_Name: comeInsect
   m_TagString: Untagged
@@ -618,10 +618,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1195500837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01d968d2d0e0744995dc4d66924807c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d539ee0a731497428c95dc7b278401f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resultText: {fileID: 131471948}
+  result: {fileID: 2126233610}
+  resultScreen:
+  - {fileID: 21300000, guid: 9a5d9308223899943b62dd673db019b3, type: 3}
+  - {fileID: 21300000, guid: 90bc5b3b220d2c04b9c68fa49512cbf0, type: 3}
   canvas: {fileID: 268591109}
   insects:
   - {fileID: 6516569194231779961, guid: 1000bb2d03a829b418d785e6fe98e2a9, type: 3}
@@ -638,7 +641,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1195500837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36092501dc51b704fb8cbb035fdd9614, type: 3}
+  m_Script: {fileID: 11500000, guid: 53d5071bff7a9b247b04037c5cffc795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   finishScreen: {fileID: 2126233610}
@@ -816,8 +819,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 433584520}
-        m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
+      - m_Target: {fileID: 433584522}
+        m_TargetAssemblyTypeName: NextSceneController, Assembly-CSharp
         m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
@@ -1028,14 +1031,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.11372549}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a5d9308223899943b62dd673db019b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
