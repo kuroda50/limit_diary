@@ -702,7 +702,7 @@ MonoBehaviour:
   - day_: 13
     eventSceneName_: AsagaoScene_Rain
   - day_: 17
-    eventSceneName_: 
+    eventSceneName_: water_melon
   - day_: 23
     eventSceneName_: AsagaoScene_Sunny
   - day_: 27
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 794b3b03f63f71c4fb4c8e7b11582d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed_: 2.4
+  moveSpeed_: 3.5
   cancelMoveDistance_: 1
   moveCooldown_: 0.26
   disappearSpeed_: 0.03
