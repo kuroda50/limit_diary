@@ -15,6 +15,18 @@ public sealed class CalenderSystem : MonoBehaviour
 
     private void Start()
     {
+        if (PlayerPrefs.GetInt("HasLaunchedBefore", 0) == 0)
+        {
+            Debug.Log("これは初回起動です！");
+
+            PlayerPrefs.SetInt("currentDay", currentDay);
+            PlayerPrefs.SetInt("HasLaunchedBefore", 1);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            currentDay = PlayerPrefs.GetInt("currentDay");
+        }
         StartCoroutine(OnStartAsync(currentDay));
     }
 
@@ -26,6 +38,8 @@ public sealed class CalenderSystem : MonoBehaviour
 
         for (; ; currentDay++)
         {
+            PlayerPrefs.SetInt("currentDay", currentDay);
+            PlayerPrefs.Save();
             var matchedEventDay = eventDaies.FirstOrDefault(e => e.Day == currentDay);
             if (matchedEventDay != null)
             {
