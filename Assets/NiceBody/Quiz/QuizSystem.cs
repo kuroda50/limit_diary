@@ -96,5 +96,6 @@ public sealed class QuizSystem : MonoBehaviour
 
         quizCanvas.enabled = false;
         resultSystem.OnDisplayResult(correctAnswerCount_ >= isSuccessNeedCount);
+        PlayerPrefs.SetInt("currentDay", 1);
     }
 }
