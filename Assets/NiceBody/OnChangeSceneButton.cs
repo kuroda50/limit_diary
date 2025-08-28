@@ -1,19 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-[RequireComponent(typeof(UnityEngine.UI.Button))]
-public sealed class OnChangeSceneButton : MonoBehaviour
+[RequireComponent(typeof(Image))]
+public sealed class OnChangeSceneButton : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] string onLoadSceneName;
 
-
-    private void Start()
+    public void OnPointerClick(PointerEventData eventData)
     {
-        GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() =>
-        {
-            GetComponent<UnityEngine.UI.Button>().onClick.RemoveAllListeners();
-            UnityEngine.SceneManagement.SceneManager.LoadScene(onLoadSceneName);
-        });
+        UnityEngine.SceneManagement.SceneManager.LoadScene(onLoadSceneName);
     }
 }
