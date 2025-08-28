@@ -1,8 +1,8 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class Insect : MonoBehaviour
 {
-    [SerializeField] float speed;//prefab‚©‚ç‚¢‚¶‚ê‚Ü‚·
+    [SerializeField] float speed;//prefabã‹ã‚‰ã„ã˜ã‚Œã¾ã™
     int howToMove;
     int howToEscape;
     private Vector2 screenCenter;
@@ -33,7 +33,7 @@ public class Insect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer.IsGameOver())//ŠÔØ‚ê‚ÅÁ‚·
+        if (timer.IsGameOver())//æ™‚é–“åˆ‡ã‚Œã§æ¶ˆã™
         {
             Destroy(this.gameObject);
         }
@@ -50,12 +50,12 @@ public class Insect : MonoBehaviour
             if (howToEscape == 0) transform.position = Vector3.Lerp(transform.position, new Vector3(rx, ry, 0), speed * Time.deltaTime);
             if (howToEscape == 1) transform.position = Vector3.Slerp(transform.position, new Vector3(rx, ry, 0), speed * Time.deltaTime);
             if (howToEscape == 2) transform.position = Vector3.MoveTowards(transform.position, new Vector3(rx, ry, 0), speed * Time.deltaTime);
-            if (Vector3.Distance(this.transform.position, screenCenter) > 10f)//‰æ–Ê’†‰›‚©‚çworldÀ•W‚Å10ˆÈã—£‚ê‚½‚çÁ‚·
+            if (Vector3.Distance(this.transform.position, screenCenter) > 10f)//ç”»é¢ä¸­å¤®ã‹ã‚‰worldåº§æ¨™ã§10ä»¥ä¸Šé›¢ã‚ŒãŸã‚‰æ¶ˆã™
             {
                 Destroy(this.gameObject);
             }
         }
-        pos = Vector3.Distance(transform.position, screenCenter);//’†‰›‚É—ˆ‚½‚©Šm‚©‚ß‚é‚½‚ß‚Ì•Ï”
+        pos = Vector3.Distance(transform.position, screenCenter);//ä¸­å¤®ã«æ¥ãŸã‹ç¢ºã‹ã‚ã‚‹ãŸã‚ã®å¤‰æ•°
         if (pos < 1) isEated = true;
     }
     public void OnClick()
