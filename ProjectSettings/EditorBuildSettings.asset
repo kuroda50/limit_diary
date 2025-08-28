@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Result1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/NiceBody/Quiz/TitleScene.unity
@@ -38,8 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Asagao/Scenen/AsagaoScene_Sunny.unity
     guid: 5da5b0c2bb8f6704eb556361101c2b4f
-    path: Assets/Scenes/Result1.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Result2.unity
     guid: fd20afe1f95b5b943bcf37ca287c3a33

@@ -392,7 +392,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seAudioSource: {fileID: 428640434}
   SEClips:
+  - {fileID: 8300000, guid: 1cae9204f34b6e2459310b2313d6751d, type: 3}
+  - {fileID: 8300000, guid: 0b39e3b2daaae884dbcb77f37caa2886, type: 3}
+  - {fileID: 8300000, guid: a4ad4cc50f4011142acb33e5e347afb3, type: 3}
+  - {fileID: 8300000, guid: feaf738d1eaf327488f714a3d05f8223, type: 3}
+  - {fileID: 8300000, guid: d208059e98e04564e908122015d23539, type: 3}
   - {fileID: 8300000, guid: 07b70bd5d3ecf3a408ec675537ac1007, type: 3}
+  - {fileID: 8300000, guid: 5731ae3989998e54f8879755579f72f2, type: 3}
 --- !u!82 &428640434
 AudioSource:
   m_ObjectHideFlags: 0
@@ -647,7 +653,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmAudioSource: {fileID: 586922693}
   bgmClips:
+  - {fileID: 8300000, guid: 84dfd5cdfca9a2f4e94c9cf07f6950e3, type: 3}
+  - {fileID: 8300000, guid: 8d758f1fff99a9a4faf48f4cd9083a3b, type: 3}
+  - {fileID: 8300000, guid: 260dbe0a19f7e214089c6308a4fedba9, type: 3}
+  - {fileID: 8300000, guid: bd4a783e1e5dfb548a8e21cec258f5c9, type: 3}
+  - {fileID: 8300000, guid: 94c000f415e4d9e4cac083635ebb1253, type: 3}
+  - {fileID: 8300000, guid: 65ab426160a1bf242a4b83ebee7089aa, type: 3}
   - {fileID: 8300000, guid: f01f34329e559114ba62ac7cad22e388, type: 3}
+  - {fileID: 8300000, guid: 3ce97a8a5d820ab439bb8de543327f00, type: 3}
+  - {fileID: 8300000, guid: 0d21102d19ee46d4cb4861e821d32d7d, type: 3}
 --- !u!1 &622338189
 GameObject:
   m_ObjectHideFlags: 0
