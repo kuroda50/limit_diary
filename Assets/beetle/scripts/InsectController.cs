@@ -27,16 +27,17 @@ public class InsectController : MonoBehaviour
         rad = angle * Mathf.Deg2Rad;
         rx = Mathf.Cos(rad) * radius;
         ry = Mathf.Sin(rad) * radius;
+        screenCenter = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 0));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!timer.IsGameOver())//éûä‘êÿÇÍÇ≈è¡Ç∑
-        {
-            Destroy(this.gameObject);
-        }
-        screenCenter =Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/2,Screen.height/2,0));
+        //if (!timer.IsGameOver())//éûä‘êÿÇÍÇ≈è¡Ç∑
+        //{
+        //    Destroy(this.gameObject);
+        //}
+       
         Debug.Log(screenCenter);
         if (!isEated)
         {

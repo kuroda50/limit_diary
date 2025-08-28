@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7997110943138794294}
   - component: {fileID: 5692408162375996561}
   - component: {fileID: 6317074687481824461}
-  - component: {fileID: 5459968020540814857}
+  - component: {fileID: 5499364638147869149}
   m_Layer: 5
   m_Name: stag
   m_TagString: Untagged
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5459968020540814857}
-        m_TargetAssemblyTypeName: InsectController, Assembly-CSharp
+      - m_Target: {fileID: 5499364638147869149}
+        m_TargetAssemblyTypeName: Insect, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -179,7 +179,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5459968020540814857
+--- !u!114 &5499364638147869149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6516569194231779961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae537c54d003a44f82793d6e1b341a2, type: 3}
+  m_Script: {fileID: 11500000, guid: ca2d04bf7d91e694a9e8a210b4c4b6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
