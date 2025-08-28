@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/kuroriku/FireGame.unity
     guid: 9542fd61191113546a5bae8ca8e53645
   - enabled: 1
+    path: Assets/NiceBody/Quiz/Quiz.unity
+    guid: a4625e34e2ef7d4458b7b1545c01a771
+  - enabled: 1
+    path: Assets/beetle/scene/beetle.unity
+    guid: 50fb5b4623fdcaa488b9bb60887a5654
+  - enabled: 1
     path: Assets/Asagao/Scenen/AsagaoScene_Cloud.unity
     guid: 606ec61afa8b1cd4eb0516913ff9e339
   - enabled: 1
@@ -44,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Result2.unity
     guid: fd20afe1f95b5b943bcf37ca287c3a33
+  - enabled: 1
+    path: Assets/Scenes/water_melon.unity
+    guid: 03d57434f4d91904c92545d301f2a645
   - enabled: 1
     path: Assets/Scenes/Result3.unity
     guid: 0c8ee2ea078df3d41990ad6b740741c5

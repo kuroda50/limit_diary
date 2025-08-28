@@ -30,7 +30,13 @@ public sealed class CalenderSystem : MonoBehaviour
         StartCoroutine(OnStartAsync(currentDay));
     }
 
-
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            PlayerPrefs.SetInt("currentDay", 1);
+        }
+    }
     private IEnumerator OnStartAsync(int startDay)
     {
         marker.transform.position = daySlots[startDay - 1].position;

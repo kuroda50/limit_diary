@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public void SwingBat() 
     {
         StartCoroutine(ShowObjectTemporarily());
+        SEManager.instance.PlaySE(6);
     }
     IEnumerator ShowObjectTemporarily()
     {
