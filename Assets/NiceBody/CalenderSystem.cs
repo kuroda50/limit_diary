@@ -35,7 +35,6 @@ public sealed class CalenderSystem : MonoBehaviour
     {
         marker.transform.position = daySlots[startDay - 1].position;
 
-
         for (; ; currentDay++)
         {
             PlayerPrefs.SetInt("currentDay", currentDay);
@@ -43,6 +42,8 @@ public sealed class CalenderSystem : MonoBehaviour
             var matchedEventDay = eventDaies.FirstOrDefault(e => e.Day == currentDay);
             if (matchedEventDay != null)
             {
+                PlayerPrefs.SetInt("currentDay", currentDay + 1);
+                PlayerPrefs.Save();
                 yield return StartCoroutine(OnTranslateEventDay(matchedEventDay));
             }
 

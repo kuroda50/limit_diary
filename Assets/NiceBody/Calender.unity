@@ -1146,11 +1146,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 794b3b03f63f71c4fb4c8e7b11582d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed_: 1
+  moveSpeed_: 2.4
   cancelMoveDistance_: 1
-  moveCooldown_: 0.1
-  disappearSpeed_: 0.01
-  appearSpeed_: 0.01
+  moveCooldown_: 0.26
+  disappearSpeed_: 0.03
+  appearSpeed_: 0.03
+  scaleAttensionCount: 3
+  scaleAttensionCount_: 20
+  scaleSize: 0.015
 --- !u!1 &1433614470
 GameObject:
   m_ObjectHideFlags: 0

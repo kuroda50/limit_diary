@@ -19,6 +19,11 @@ public sealed class MarkerUI : MonoBehaviour
     [Header("OnAppeaerAnimation")]
     [SerializeField, Range(0, 1)] float appearSpeed_ = 0.01f;
 
+    [Header("OnScaleAttensionAnimation")]
+    [SerializeField] int scaleAttensionCount = 3;
+    [SerializeField] int scaleAttensionCount_ = 30;
+    [SerializeField] float scaleSize = 0.01f;
+
     private void Awake()
     {
         image_ = GetComponent<Image>();
@@ -29,7 +34,7 @@ public sealed class MarkerUI : MonoBehaviour
         for (float alpha = 1; alpha > 0; alpha -= disappearSpeed_)
         {
             image_.color = new Color(image_.color.r, image_.color.g, image_.color.b, alpha);
-            yield return null;
+            yield return new WaitForSeconds(0.016f);
         }
     }
 
@@ -38,7 +43,7 @@ public sealed class MarkerUI : MonoBehaviour
         for (float alpha = 0; alpha < 1; alpha += disappearSpeed_)
         {
             image_.color = new Color(image_.color.r, image_.color.g, image_.color.b, alpha);
-            yield return null;
+            yield return new WaitForSeconds(0.016f);
         }
     }
 
@@ -52,26 +57,26 @@ public sealed class MarkerUI : MonoBehaviour
                 break;
 
             transform.position += moveDirection.normalized * moveSpeed_;
-            yield return null;
+            yield return new WaitForSeconds(0.016f);
         }
-        
+
         yield return new WaitForSeconds(moveCooldown_);
     }
 
     public IEnumerator OnScaleAttensionAsync()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < scaleAttensionCount; i++)
         {
-            for (int scale = 0; scale < 100; scale++)
+            for (int scale = 0; scale < scaleAttensionCount_; scale++)
             {
-                transform.localScale += new Vector3(0.003f, 0.003f);
-                yield return null;
+                transform.localScale += Vector3.one * scaleSize;
+                yield return new WaitForSeconds(0.016f);
             }
 
-            for (int scale = 100; scale > 0; scale--)
+            for (int scale = scaleAttensionCount_; scale > 0; scale--)
             {
-                transform.localScale -= new Vector3(0.003f, 0.003f);
-                yield return null;
+                transform.localScale -= Vector3.one * scaleSize;
+                yield return new WaitForSeconds(0.016f);
             }
         }
     }
