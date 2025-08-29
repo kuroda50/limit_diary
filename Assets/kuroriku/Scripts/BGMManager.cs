@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +10,9 @@ public class BGMManager : MonoBehaviour
 
     [SerializeField] AudioSource bgmAudioSource;
     [SerializeField] public AudioClip[] bgmClips; // 再生したいBGMのリスト
+
+
+
     void Awake()
     {
         if (instance == null)
