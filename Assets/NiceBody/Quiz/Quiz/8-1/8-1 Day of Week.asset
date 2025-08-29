@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 308571745d679454a8dca2ba30cea3f6, type: 3}
-  m_Name: SampleQuiz 2
+  m_Name: 8-1 Day of Week
   m_EditorClassIdentifier: 
-  topicText: AIUEO
-  dateSprite: {fileID: 21300000, guid: bca116832e3018b41a0fe2eaa0a4b958, type: 3}
+  topicText: "\u4F55\u66DC\u65E5?"
+  dateSprite: {fileID: 21300000, guid: fbbf4fd203f09954cb404888fe9733e4, type: 3}
   answerCandiates_:
-  - text: A
+  - text: "\u6728"
     uiSprite_: {fileID: 0}
-  - text: B
+  - text: "\u6708"
     uiSprite_: {fileID: 0}
-  - text: C
+  - text: "\u706B"
     uiSprite_: {fileID: 0}
-  - text: D
+  - text: "\u6C34"
     uiSprite_: {fileID: 0}
   correctAnswerIndex_: 0

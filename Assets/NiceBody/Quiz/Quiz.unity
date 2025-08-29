@@ -1962,7 +1962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81fbff2bc8dc3b84c97088e20362951e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onLoadSceneName: Title
+  onLoadSceneName: TitleScene
 --- !u!1 &1716307700
 GameObject:
   m_ObjectHideFlags: 0

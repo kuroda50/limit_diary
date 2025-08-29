@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,15 +11,8 @@ public class Buket : MonoBehaviour
 
     [SerializeField] float setPower;
 
-    public float GetPower()
-    {
-        return power;
-    }
-
-    public bool GetInput()
-    {
-        return isonleyInput;
-    }
+    public float GetPower() => power;
+    public bool GetInput() => isonleyInput;
 
     public void ResetInput()
     {
@@ -38,7 +31,7 @@ public class Buket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // “ü—Í‚³‚ê‚½‚Æ‚«‚ÌÀs@ƒ`ƒƒƒŒƒ“ƒW‰ñ”‚Í1‰ñ‚Ì‚İ
+        // å…¥åŠ›ã•ã‚ŒãŸã¨ãã®å®Ÿè¡Œã€€ãƒãƒ£ãƒ¬ãƒ³ã‚¸å›æ•°ã¯1å›ã®ã¿
         if (Input.GetKey(KeyCode.Mouse0))
         {
             if (!isonleyInput)
@@ -65,7 +58,7 @@ public class Buket : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        if(Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             isonleyInput = true;
         }

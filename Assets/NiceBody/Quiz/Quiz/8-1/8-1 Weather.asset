@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308571745d679454a8dca2ba30cea3f6, type: 3}
+  m_Name: 8-1 Weather
+  m_EditorClassIdentifier: 
+  topicText: "\u5929\u6C17\u306F?"
+  dateSprite: {fileID: 21300000, guid: fbbf4fd203f09954cb404888fe9733e4, type: 3}
+  answerCandiates_:
+  - text: "\u6674\u308C"
+    uiSprite_: {fileID: 0}
+  - text: "\u304F\u3082\u308A"
+    uiSprite_: {fileID: 0}
+  - text: "\u96E8"
+    uiSprite_: {fileID: 0}
+  - text: 
+    uiSprite_: {fileID: 0}
+  correctAnswerIndex_: 1
