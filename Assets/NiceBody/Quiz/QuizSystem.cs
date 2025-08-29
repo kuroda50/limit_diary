@@ -52,6 +52,8 @@ public sealed class QuizSystem : MonoBehaviour
 
         foreach (var (answer, ui) in zipped)
         {
+            ui.SetEnable(answer.Text != "");
+
             ui.TextBox.text = answer.Text;
             ui.Button.onClick.AddListener(() =>
             {

@@ -537,19 +537,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 242280190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 242280190}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-        m_MethodName: set_sprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 14daeddf49f116948b8a2a0ce90f1d91, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &242280190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,8 +614,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122, y: -34}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: -136, y: -17.365889}
+  m_SizeDelta: {x: 272, y: 266.7318}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281198309
 MonoBehaviour:
@@ -705,7 +693,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -147.59218, y: 169}
-  m_SizeDelta: {x: 231.1885, y: 100}
+  m_SizeDelta: {x: 290, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &482340768
 MonoBehaviour:
@@ -936,19 +924,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1020911247}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1020911247}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-        m_MethodName: set_sprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 14daeddf49f116948b8a2a0ce90f1d91, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1020911247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1071,19 +1047,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1207886220}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1207886220}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-        m_MethodName: set_sprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 14daeddf49f116948b8a2a0ce90f1d91, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1207886220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1778,19 +1742,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1650535379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1650535379}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-        m_MethodName: set_sprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 14daeddf49f116948b8a2a0ce90f1d91, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1650535379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2013,7 +1965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizStatusGroup_: {fileID: 11400000, guid: 900621d40aa8d8d469e8061e61ead7ae, type: 2}
   appearedQuizzes_: []
-  maxAppearQuizCount_: 2
+  maxAppearQuizCount_: 10
   appearQuizCount_: 0
   correctAnswerCount_: 0
   wrongAnswerCount_: 0
@@ -2026,7 +1978,7 @@ MonoBehaviour:
   wrongAnswerCharactorSprite_: {fileID: 21300000, guid: c7ff2efdea94ddb488e5022b4bf93dc8, type: 3}
   stayAnswerCharactorSprite_: {fileID: 21300000, guid: 27f881ad986a052418eb8b280825cb8b, type: 3}
   resultSystem: {fileID: 1559649025}
-  isSuccessNeedCount: 2
+  isSuccessNeedCount: 5
 --- !u!1 &1853752775
 GameObject:
   m_ObjectHideFlags: 0
