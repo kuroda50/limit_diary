@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEditor.Experimental.GraphView;
@@ -9,6 +9,8 @@ public class Flower : MonoBehaviour
     private float water = 0;
     private bool isClier = false;
 
+    [SerializeField] Canvas successResultCanvas;
+    [SerializeField] Canvas failureResultCanvas;
     [SerializeField] private GameObject asagao;
     [SerializeField] Buket buket;
     [SerializeField] Buket hit_buket;
@@ -32,7 +34,7 @@ public class Flower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // ƒfƒoƒbƒO—p@ƒŠƒZƒbƒg
+        // ãƒ‡ãƒãƒƒã‚°ç”¨ã€€ãƒªã‚»ãƒƒãƒˆ
         //if (Input.GetKey(KeyCode.R))
         //{
         //    water = setWater;
@@ -41,8 +43,8 @@ public class Flower : MonoBehaviour
         //    hit_buket.ResetInput();
         //}
 
-        // ƒNƒŠƒA”»’è ƒNƒŠƒAƒ‰ƒCƒ““à‚É…•ª—ÊƒQ[ƒW‚ªû‚Ü‚Á‚Ä‚¢‚é@ƒNƒŠƒAƒ‰ƒCƒ“‚Íè“ü—Í@ƒAƒz‚Å‚·‚İ‚Ü‚¹‚ñ
-        // °‚êF•’ÊA@“Ü‚èFŠÈ’PA@‰JF“ï‚µ‚¢A@‚®‚ç‚¢‚Åİ’è‚µ‚Ä‚Ü‚·
+        // ã‚¯ãƒªã‚¢åˆ¤å®š ã‚¯ãƒªã‚¢ãƒ©ã‚¤ãƒ³å†…ã«æ°´åˆ†é‡ã‚²ãƒ¼ã‚¸ãŒåã¾ã£ã¦ã„ã‚‹æ™‚ã€€ã‚¯ãƒªã‚¢ãƒ©ã‚¤ãƒ³ã¯æ‰‹å…¥åŠ›ã€€ã‚¢ãƒ›ã§ã™ã¿ã¾ã›ã‚“
+        // æ™´ã‚Œï¼šæ™®é€šã€ã€€æ›‡ã‚Šï¼šç°¡å˜ã€ã€€é›¨ï¼šé›£ã—ã„ã€ã€€ãã‚‰ã„ã§è¨­å®šã—ã¦ã¾ã™
         if (buket.GetInput() && !isClier && (ClierLineMin <= water/100 && water/100 <= ClierLineMax))
         {
             isClier = true;
@@ -50,23 +52,22 @@ public class Flower : MonoBehaviour
 
         if (isClier)
         {
-            // ƒNƒŠƒAˆ—@¬’·‚µ‚½’©Šç‚ğd‚Ë‚Ä•\¦
+            // ã‚¯ãƒªã‚¢å‡¦ç†ã€€æˆé•·ã—ãŸæœé¡”ã‚’é‡ã­ã¦è¡¨ç¤º
             asagao.SetActive(true);
-            // ‚¢‚¢Š´‚¶‚ÌƒGƒtƒFƒNƒg‚Æ‚©‰¹‚Æ‚©@”C‚¹‚Ü‚·@‚²‚ß‚ñ‚È‚³‚¢
+            // ã„ã„æ„Ÿã˜ã®ã‚¨ãƒ•ã‚§ã‚¯ãƒˆã¨ã‹éŸ³ã¨ã‹ã€€ä»»ã›ã¾ã™ã€€ã”ã‚ã‚“ãªã•ã„
 
-
+            successResultCanvas.enabled = true;
         }
         else if(buket.GetInput())
         {
-            // ¸”sˆ—
-            // ‚¢‚¢Š´‚¶‚ÌƒGƒtƒFƒNƒg‚Æ‚©‰¹‚Æ‚©@”C‚¹‚Ü‚·@‚²‚ß‚ñ‚È‚³‚¢
-
-
+            // å¤±æ•—å‡¦ç†
+            // ã„ã„æ„Ÿã˜ã®ã‚¨ãƒ•ã‚§ã‚¯ãƒˆã¨ã‹éŸ³ã¨ã‹ã€€ä»»ã›ã¾ã™ã€€ã”ã‚ã‚“ãªã•ã„
+            failureResultCanvas.enabled = true;
         }
 
     }
 
-    // “–‚½‚è”»’è‚Å…•ª—Ê‚ğ‘‚â‚·@UIŠÖŒW‚È‚µ@Œ©‚¦‚È‚¢ƒIƒuƒWƒFƒNƒg‚Æ‚µ‚Ä‚Ü‚·
+    // å½“ãŸã‚Šåˆ¤å®šã§æ°´åˆ†é‡ã‚’å¢—ã‚„ã™ã€€UIé–¢ä¿‚ãªã—ã€€è¦‹ãˆãªã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¨ã—ã¦ã¾ã™
     void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Water")
