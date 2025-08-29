@@ -19,10 +19,12 @@ public class BGMManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        } else
+        }
+        else
         {
             Destroy(gameObject);
         }
+        bgmAudioSource.volume = 0.2f;
     }
 
     public void PlayBGM(int index)
