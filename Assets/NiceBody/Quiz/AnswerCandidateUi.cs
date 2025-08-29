@@ -20,4 +20,9 @@ public sealed class AnswerCandidateUi : MonoBehaviour
         image_  = GetComponent<Image>();
         button_ = GetComponent<Button>();
     }
+
+    public void SetEnable(bool enable)
+    {
+        image_.gameObject.SetActive(enable);
+    }
 }
