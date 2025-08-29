@@ -21,6 +21,7 @@ public class SEManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        seAudioSource.volume = 0.2f;
     }
 
     // ボリューム変更
