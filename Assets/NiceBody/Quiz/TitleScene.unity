@@ -535,6 +535,7 @@ GameObject:
   - component: {fileID: 586922694}
   - component: {fileID: 586922693}
   - component: {fileID: 586922695}
+  - component: {fileID: 586922696}
   m_Layer: 0
   m_Name: BGMManager
   m_TagString: Untagged
@@ -676,6 +677,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f01f34329e559114ba62ac7cad22e388, type: 3}
   - {fileID: 8300000, guid: 3ce97a8a5d820ab439bb8de543327f00, type: 3}
   - {fileID: 8300000, guid: 0d21102d19ee46d4cb4861e821d32d7d, type: 3}
+--- !u!114 &586922696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586922692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c90392f56a4684da56b7dc4b341b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playBgmIndex: 7
 --- !u!1 &622338189
 GameObject:
   m_ObjectHideFlags: 0
